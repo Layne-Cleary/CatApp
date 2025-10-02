@@ -9,7 +9,7 @@ class Cat (val name: String, var age: Int, var weight: Int) {
 
     }
 
-    public fun walk(distance: Int) : Boolean
+    fun walk(distance: Int) : Boolean
     {
         if(weight - distance >= 5) {
             weight -= distance
