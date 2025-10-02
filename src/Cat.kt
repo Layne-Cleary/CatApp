@@ -1,14 +1,12 @@
-class Cat (private val name: String, private var age: Int, weightIn: Int) {
+class Cat (val name: String, var age: Int, var weight: Int) {
 
-    var weight = 0
-        set(newWeight) {
-            if(newWeight >= 5) {
-                field = newWeight
-            }
+    fun eat(amount: Int) : Boolean {
+        if(amount + weight < 20) {
+            weight++
+            return true
         }
+        return false
 
-    init {
-        weight = weightIn
     }
 
     public fun walk(distance: Int) : Boolean
